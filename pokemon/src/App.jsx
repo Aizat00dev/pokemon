@@ -1,3 +1,4 @@
+import React from "react";
 import Cards from "./Cards";
 import dataPokemon from "./dataPokemon";
 import './App.css';
@@ -7,14 +8,13 @@ function App() {
     return(
       <Cards
         key ={item.id}
-        name ={item.name}
-        url ={item.url}
+       {...item}
       />
     )
   })  
   return (
     <div className="App">
-      <Cards/>
+      {cards}
     </div>
   );
 }
